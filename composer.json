@@ -1,0 +1,19 @@
+{
+	"name": "sr/applicant-form",
+	"description": "Applicant Form",
+	"type": "wordpress-plugin",
+	"license": "GPLv2",
+	"authors": [
+		{
+			"name": "Shuvo Roy",
+			"email": "shuvorroy@gmail.com"
+		}
+	],
+	"minimum-stability": "dev",
+	"require": {},
+	"autoload": {
+		"classmap": [
+			"includes/"
+		]
+	}
+}

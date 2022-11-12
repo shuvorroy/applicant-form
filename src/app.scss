@@ -1,0 +1,131 @@
+#applicant-form {
+	font-family: sans-serif;
+	background-color: white;
+	padding: 20px;
+	position: relative;
+	fieldset {
+		margin-bottom: 15px;
+		margin-bottom: 15px;
+		border-radius: 5px;
+		border: 0.2rem solid #b1b1b1;
+    	padding: 2rem;
+		font-size: inherit;
+		line-height: inherit;
+		text-align: inherit;
+		legend {
+			color: #1d8df6;
+			font-size: 0.85em;
+			font-weight: 700;
+			padding: 0 1rem;
+			margin: 0;
+		}
+
+		select {
+			display: block;
+			width: 100%;
+			padding: 5px;
+			border-radius: 5px;
+		}
+
+		input {
+			border-radius: 5px;
+			width: 100%;
+			background: #fff;
+			padding: 0.75em;
+			font-size: 1rem;
+		}
+
+		input[type="text"],textarea {
+			border-radius: 5px;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			background: #fff;
+			border-style: solid;
+			border-width: 0.1rem;
+			box-shadow: none;
+			display: block;
+			letter-spacing: -0.015em;
+			margin: 0;
+		}
+
+		input[type="file"] {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		.upload-progressbar {
+			position: relative;
+			width: 100%;
+			height: 10px;
+			border: 1px solid gray;
+			border-radius: 3px;
+			display: none;
+			span.progress {
+				display: block;
+				position: absolute;
+				border-radius: 1px;
+				height: 100%;
+				background: #00c200;
+				left: 0;
+				top: 0;
+			}
+		}
+	}
+
+	.btns {
+		display: flex;
+		justify-content: center;
+
+		input[type="submit"] {
+			background-color: #1d8df6;
+			border-radius: 5px;
+			padding: 20px;
+			line-height: 1;
+
+			&:hover {
+				background-color: #036fc1;
+				text-decoration: none;
+			}
+		}
+	}
+
+	p.file-message {
+		font-size: 1rem;
+	}
+
+	.loader-container {
+		display: none;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba( 255, 255, 255, .5 );
+		&.show {
+			display: flex;
+		}
+
+		p {
+			border: 2px solid #036fc1;
+			padding: 5px 20px;
+			color: #036fc1;
+		}
+	}
+}
+
+
+.loader {
+	border: 16px solid #f3f3f3; /* Light grey */
+	border-top: 16px solid #3498db; /* Blue */
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+  }

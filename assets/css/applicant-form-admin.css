@@ -1,0 +1,31 @@
+.applicant-details {
+  font-family: sans-serif;
+  background-color: white;
+  padding: 20px;
+}
+.applicant-details fieldset {
+  margin-bottom: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 0.2rem solid #b1b1b1;
+  padding: 2rem;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: inherit;
+}
+.applicant-details fieldset legend {
+  color: #1d8df6;
+  font-size: 0.85em;
+  font-weight: 700;
+  padding: 0 1rem;
+  margin: 0;
+}
+.applicant-details fieldset label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 15px;
+}
+.applicant-details fieldset label p {
+  font-size: 1rem;
+  margin: 0;
+}
