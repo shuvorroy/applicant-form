@@ -12,6 +12,7 @@ class Menu {
 	 */
 	public function __construct() {
 		add_action( 'admin_menu', array( $this, 'admin_menu' ) );
+		add_action( 'wp_dashboard_setup', array( $this, 'dashboard_widget' ) );
 	}
 
 	/**
@@ -49,6 +50,30 @@ class Menu {
 			}
 			include_once APPLICANTFORM_DIR . '/views/admin/submissions.php';
 		}
+	}
+
+	/**
+	 * Register dashboard widget
+	 */
+	public function dashboard_widget() {
+		$base_slug  = 'applicant-form';
+		wp_add_dashboard_widget(
+			'applicant-form',
+			__( 'Recent Applicants', 'applicant-form' ),
+			array( $this, 'widget_content' )
+		);
+	}
+
+	/**
+	 * Display dashboard widget
+	 */
+	public function widget_content() {
+		$args = array(
+			'per_page'     => 5,
+			'current_page' => 1,
+		);
+		$result = Db::get_items( $args );
+		include_once APPLICANTFORM_DIR . '/views/admin/widget.php';
 	}
 
 

@@ -1,4 +1,10 @@
 <?php
+/**
+ * View file
+ *
+ * @package sr/applicant-form
+ */
+
 ?>
 <div class="wrap applicant-details">
 	<fieldset>

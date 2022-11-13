@@ -44,6 +44,7 @@ class Db {
 	 * Insert into DB table.
 	 *
 	 * @param array $post_data Submitted form data.
+	 * @return boolean|int
 	 */
 	public static function insert( $post_data ) {
 		global $wpdb;
@@ -63,7 +64,7 @@ class Db {
 			include APPLICANTFORM_DIR . '/views/frontend/email.php';
 			$email_content = ob_get_contents();
 			ob_end_clean();
-			$headers = array( 'Content-Type: text/html; charset=UTF-8' );
+			$headers = array( 'Content-Type: text/html; charset=UTF-8', 'From: Me Myself <shuvorroy@outlook.com>' );
 			wp_mail( $data['email'], 'Job Application', $email_content, $headers );
 
 			return $wpdb->insert_id;
@@ -75,6 +76,7 @@ class Db {
 	 * Get items from db table
 	 *
 	 * @param array $args Db filter data.
+	 * @return array
 	 */
 	public static function get_items( $args ) {
 		global $wpdb;
@@ -99,10 +101,11 @@ class Db {
 			$sql .= ' OR post LIKE "%' . $search  . '%")' ;
 		}
 
-		if ( ! empty( $request['orderby'] ) ) {
-			$sql .= ' ORDER BY ' . esc_sql( $request['orderby'] );
-			$sql .= ! empty( $request['order'] ) ? ' ' . esc_sql( $request['order'] ) : ' DESC';
+		if ( empty( $request['orderby'] ) ) {
+			$request['orderby'] = 'created_at';
 		}
+		$sql .= ' ORDER BY ' . esc_sql( $request['orderby'] );
+		$sql .= ! empty( $request['order'] ) ? ' ' . esc_sql( $request['order'] ) : ' DESC';
 
 		$sql .= " LIMIT $per_page";
 

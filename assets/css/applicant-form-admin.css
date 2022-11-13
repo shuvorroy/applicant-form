@@ -29,3 +29,8 @@
   font-size: 1rem;
   margin: 0;
 }
+
+.wrap.widget-recent-submission table {
+  width: 100%;
+  text-align: left;
+}

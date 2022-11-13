@@ -9,8 +9,7 @@ if ( ! class_exists( 'WP_List_Table' ) ) {
 /**
  * The submission list class
  */
-class Table extends \WP_List_Table
-{
+class Table extends \WP_List_Table {
 
 	/**
 	 * Initialize the class
@@ -98,7 +97,7 @@ class Table extends \WP_List_Table
 	 */
 	public function get_sortable_columns() {
 		$sortable_columns = array(
-			'created_at' => array( 'created_at', true ),
+			'created_at' => array( 'created_at', false ),
 		);
 		return $sortable_columns;
 	}

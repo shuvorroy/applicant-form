@@ -1,4 +1,10 @@
 <?php
+/**
+ * View file
+ *
+ * @package sr/applicant-form
+ */
+
 $searchby = ! empty( $_REQUEST['search'] ) ? sanitize_text_field( wp_unslash( $_REQUEST['search'] ) ) : '';
 ?>
 

@@ -1,17 +1,22 @@
 <?php
+/**
+ * View file
+ *
+ * @package sr/applicant-form
+ */
 
 ?>
 <form action="" id="applicant-form" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
 	<input type="hidden" name="action" value="submit_application">
-	<input type="hidden" name="security" value="<?php echo wp_create_nonce( 'applicant_form' ); ?>">
+	<input type="hidden" name="security" value="<?php echo esc_attr( wp_create_nonce( 'applicant_form' ) ); ?>">
 	<fieldset>
 		<legend>Job</legend>
 		<label>
 			Position
 			<select name="post" required>
-				<option>Job A</option>
-				<option>Job B</option>
-				<option>Job C</option>
+				<option>WordPress Plugin Developer</option>
+				<option>WordPress Theme Developer</option>
+				<option>Fullstack Developer</option>
 			</select>
 		</label>
 	</fieldset>
@@ -53,7 +58,7 @@
 				<input type="file" name="cv" accept=".doc,.docx,.pdf" required>
 			</label>
 			<div class="upload-progressbar"><span class="progress"></span></div>
-			<p class="file-message">Possible file types: DOC, PDF. Maximum file size: 10 MB.</p>
+			<p class="file-message">Possible file types: DOC, PDF.</p>
 		</div>
 	</fieldset>
 	<div class="btns">

@@ -31,15 +31,6 @@ define( 'APPLICANTFORM_URL', trailingslashit( plugin_dir_url( APPLICANTFORM ) ) 
 define( 'APPLICANTFORM_ASSETS', trailingslashit( APPLICANTFORM_URL . 'assets' ) );
 define( 'APPLICANTFORM_REST_BASE', 'applicant-form/' );
 
-function log_me($message) {
-	if (WP_DEBUG === true) {
-		if (is_array($message) || is_object($message)) {
-			error_log(print_r($message, true));
-		} else {
-			error_log($message);
-		}
-	}
-}
 
 /**
  * Load Applicant Form when all plugins loaded

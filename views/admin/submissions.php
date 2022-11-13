@@ -1,4 +1,9 @@
 <?php
+/**
+ * View file
+ *
+ * @package sr/applicant-form
+ */
 
 ?>
 

@@ -1,3 +1,12 @@
+<?php
+/**
+ * View file
+ *
+ * @package sr/applicant-form
+ */
+
+?>
+
 <!doctype html>
 <html>
 
