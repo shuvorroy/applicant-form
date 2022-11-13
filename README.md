@@ -17,39 +17,39 @@ composer dump-autoload
 ### Shortcode
 Create a new page and add the shortcode [applicant_form]. Save the page.
 
-![Shortcode](../src/Shortcode.png)
+![Shortcode](./src/Shortcode.png)
 
 When Submitted the form entries will be stored in the database and an email will be sent to the applicant.
 
-![Email](../src/Email.png)
+![Email](./src/Email.png)
 
 ### Frontend
 
 On the page, you should see the following form.
  
-![Form](../src/Form.png)
+![Form](./src/Form.png)
 
 ### List
 
 From the WordPress admin menu go to Applicants and you should see the list of submissions.
  
-![List](../src/List.png)
+![List](./src/List.png)
 
 ### Search and Sort
 
 You can search the submission by keywords and sort the list by Submission Date.
  
-![Search](../src/Search.png)
+![Search](./src/Search.png)
 
 ### Action
 
 You can view a submission entry by clicking on View and delete the submission by clicking on Delete.
  
-![Actions](../src/View.png)
+![Actions](./src/View.png)
 
 ### Widget
 
 You can view the latest 5 submissions from the admin dashboard. 
  
-![Widget](../src/Widget.png)
+![Widget](./src/Widget.png)
 
