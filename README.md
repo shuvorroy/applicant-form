@@ -19,15 +19,17 @@ Create a new page and add the shortcode [applicant_form]. Save the page.
 
 ![Shortcode](./src/Shortcode.png)
 
-When Submitted the form entries will be stored in the database and an email will be sent to the applicant.
-
-![Email](./src/Email.png)
-
 ### Frontend
 
 On the page, you should see the following form.
  
 ![Form](./src/Form.png)
+
+### Email
+
+When Submitted the form entries will be stored in the database and an email will be sent to the applicant.
+
+![Email](./src/Email.png)
 
 ### List
 

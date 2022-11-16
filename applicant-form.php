@@ -20,12 +20,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-const VERSION = '1.0.0';
-
-
 define( 'APPLICANTFORM', __FILE__ );
 define( 'APPLICANTFORM_NAME', 'applicant-form' );
-define( 'APPLICANTFORM_VERSION', VERSION );
+define( 'APPLICANTFORM_VERSION', '1.0.0' );
 define( 'APPLICANTFORM_DIR', trailingslashit( plugin_dir_path( APPLICANTFORM ) ) );
 define( 'APPLICANTFORM_URL', trailingslashit( plugin_dir_url( APPLICANTFORM ) ) );
 define( 'APPLICANTFORM_ASSETS', trailingslashit( APPLICANTFORM_URL . 'assets' ) );
